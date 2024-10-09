@@ -1,0 +1,702 @@
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+      background-color: #ffffff;
+      color: #000000;
+  
+  }
+
+  .nav-bar{
+      background-color: #1A1A59;
+      position:fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.447);
+      z-index: 1000;
+  }
+  
+  .hidden{
+      display: none;
+  }
+  
+  .nav-link{
+      background-color: #1A1A59;
+      list-style: none;
+      color: #FF5722;
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+      padding: 1.5rem;
+      transition: .5s;
+  }
+  
+  .nav-link:hover{
+      background-color: #363684;
+      scale: 1.02;
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.447);
+  }
+  .nav-link{
+      color: #FF5722;
+      text-decoration: none;
+  }
+  .search-procedure{
+      background-color: #f2f2f2;
+      width: 15%;
+      margin-right: 1%;
+      border-radius: 5px;
+      border: 1px solid #a4a2a2;
+      padding: .3%;
+  }
+  
+  .box-search{
+      background-color: #f2f2f2;
+      border: none; /* Mude a cor da borda quando o input é focado */
+      outline: none; /* Remova o contorno padrão */
+      font-size: 14px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+      width: 92%;
+
+  }
+  
+  .btn-search{
+  
+      border: none;
+      position: fixed;
+      background-color: transparent;
+      font-size: 17px;
+  }
+  
+  .btn-search:hover{
+      cursor: pointer;
+  }
+  
+  
+  .nav-logo{
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 20px;
+  }
+  .nav-logo img{
+      max-width: 120px;
+  }
+  .menu-hamburguer {
+    cursor: pointer;
+    display: none; /* Será exibido apenas em telas pequenas */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.menu-hamburguer .line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+  
+  .msg{
+      margin: 15px auto;
+      width: 300px;
+      padding: 15px;
+      border-radius: 7px;
+      font-size: 20px;
+  }
+  .success{
+      color: #3a6604;
+      background-color: #a4e753;
+      border: 2px solid #3a6604;
+  }
+  .error{
+      color: #8c0707;
+      background-color: #FFC0C1;
+      border: 2px solid #FE0000;
+  }
+  /* Home */
+
+  .container-procedimentos{
+      background-color: #008ECF;
+      color: white;
+      width: 55%;
+      margin: auto;
+      padding: 20px;
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.447);
+      border-radius: 0 0 10px 10px;
+  }
+  
+  .title-procedimento{
+      margin: auto;
+      text-align: center;
+      min-width: 40%;
+      max-width: 70%;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #FFD700;
+  }
+  
+  .info-procedimento{
+      font-size: 20px;
+      font-weight: bold;
+      margin: auto;
+      width: 90%;
+      background-color: #007fba;
+      border-radius: 30px;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction:column;
+      justify-content: center; /* Alinha os itens verticalmente */
+      text-align: center;
+      transition: .1s;
+  }
+  .info-procedimento:hover{
+      cursor: pointer;
+  }
+  .name-user{
+      margin-left: 80%;
+  }
+  .data-procedimento{
+      margin-top: 15px;
+      margin-left: 80%;
+  }
+  
+  .info-procedimento:hover{
+      scale: 1.001;
+      box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.447);
+  }
+  
+  .link-procedimento{
+      text-decoration: none;
+      color: #f2f2f2;
+
+
+  }
+  
+  /* View Procedimento */
+  .container-body-procedimento{
+      background-color: #008ECF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      width: 70%;
+      margin: auto;
+      padding: 20px;
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.447);
+      border-radius: 0 0 10px 10px;
+  }
+  
+  .title-view-procedimento{
+      background-color: #007FBA;
+      font-size: 14px;
+      padding: 15px;
+      max-width: 70%;
+      border-radius: 7px;
+      box-shadow: inset 0 0px 5px 2px rgba(0, 0, 0, 0.447);
+  }
+  
+  .passo-container{
+      width: 85%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      background-color: #007fba;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #1A1A59;
+      border-radius: 10px;
+      padding: 15px;
+  
+  }
+  
+  .title-passo{
+      background-color: #1A1A59;
+      padding: 7px;
+      margin-top: -15px;
+      margin-bottom: 10px;
+      border-radius: 0 0 5px 5px;
+      width: 20%;
+  }
+  
+  .text-passo{
+      background-color: rgb(255, 255, 255);
+      letter-spacing: 0;
+      line-height: 1.5;
+      font-weight: 400;
+      font-size: 14px;
+      overflow-wrap: break-word;
+      text-align: justify;
+      width: 85%;
+      color: #333333;
+      padding: 15px;
+      border: 2px solid #F5F5F5;
+      border-radius: 7px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  
+      
+  }
+  
+  .img-passo{
+      min-width: 60%;
+      max-width: 85%;
+      min-height: 60%;
+      max-height: 80%;
+      border: 2px solid #1A1A59;
+      border-radius: 10px;
+  }
+  
+  .btn-download{
+      background-color: #1A1A59;
+      border: 2px solid #1A1A59;
+      font-size: 17px;
+      border-radius: 5px;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+      transition: .2s;
+  }
+  
+  .btn-download:hover{
+      cursor: pointer;
+      background-color: transparent;
+      
+  }
+  
+  /* Criando Procedures */
+/* Criando Procedures */
+.step-container {
+    font-size: 18px;
+    font-weight: 600;
+    margin: auto;
+    width: 85%;
+    background-color: #007fba; /* Azul */
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.step-container textarea {
+    border: 1px solid #a4a2a2a0;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px 0;
+    font-size: 18px;
+    outline: none;
+    text-align: justify;
+    padding: 15px;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.main-container {
+    padding-top: 3.9rem;
+    text-align: center;
+}
+
+.form-container {
+    border-radius: 15px;
+    margin: auto;
+    background-color: #008ECF; /* Azul mais escuro */
+    width: 75%;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+.title-container {
+    padding-top: 30px;
+}
+
+.label-procedure {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.title_procedure {
+    width: 85%;
+    border: 1px solid #a4a2a2a0;
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn-add {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    border: 2px solid #1A1A59;
+    background-color: #1A1A59;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-add:hover,
+.submit:hover,
+.edit-procedure:hover {
+    background-color: transparent;
+    border-color: #1A1A59;
+    color: #1A1A59;
+    cursor: pointer;
+}
+
+.submit, .edit-procedure {
+    color: #ffffff;
+    border: 2px solid #1A1A59;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 12px 20px;
+    background-color: #1A1A59;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-input-image {
+    color: #ffffff;
+    border: 2px solid #1A1A59;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 12px 20px;
+    background-color: #1A1A59;
+    margin: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-input-image:hover {
+    background-color: transparent;
+    border-color: #1A1A59;
+    color: #1A1A59;
+    cursor: pointer;
+}
+.delegate-procedure{
+    background-color: #FFA726; /* Rosa */
+    max-width: 250px;
+    border: 2px solid #FFA726;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.delegate-procedure:hover{
+    background-color: transparent;
+    border-color: #FFA726;
+    color: #FFA726;
+    cursor: pointer;
+}
+.delete-step, .delete-procedure {
+    background-color: #FE436F; /* Rosa */
+    max-width: 250px;
+    border: 2px solid #FE436F;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 12px 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.delete-step:hover,
+.delete-procedure:hover {
+    background-color: transparent;
+    border-color: #FE436F;
+    color: #FE436F;
+    cursor: pointer;
+}
+
+.image-preview img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #1A1A59; /* Azul escuro */
+    margin-top: 10px;
+}
+
+.manutencao-procedure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+/* Estilos para o container de login e registro */
+.container-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F5F5F5; /* Cinza muito claro */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login, .register {
+    background-color: #ffffff; /* Branco */
+    border: 1px solid #a4a2a2; /* Cinza claro */
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login h2, .register h2 {
+    color: #1A1A59; /* Azul escuro */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333; /* Cinza escuro */
+}
+
+.input-login {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a4a2a2; /* Cinza claro */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-login {
+    background-color: #007fba; /* Azul */
+    border: none;
+    color: #ffffff; /* Branco */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-login i {
+    margin-right: 5px;
+}
+
+.btn-login:hover {
+    background-color: #005f8a; /* Azul escuro */
+}
+
+/* Ajuste para formularios de login e registro */
+.login {
+    margin-right: 20px;
+}
+
+.register {
+    margin-left: 20px;
+}
+
+h2 {
+    color: #1A1A59; /* Azul escuro */
+}
+
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Botão de fechar */
+.close {
+    margin-left: 500px;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* pagina de edição de user */
+.container-btns-form{
+    display: flex;
+}
+.btn-edit{
+    max-width: 250px;
+    max-height: 50px;
+    border-radius: 15px;
+    margin: 5px;
+    border: 2px solid #007fba;
+
+}
+.btn-edit:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #007fba;
+    color: #007fba;
+
+}
+.delete-user{
+    padding: 7px;
+    font-size: 14px;
+}
+
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .container-login {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login, .register {
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1470px){
+    *{
+        font-size: 14px !important;
+        
+    }
+    button{
+        padding: 7px !important;
+    }
+    .nav-bar{
+        font-size: 11px;
+
+    }
+    .nav-bar{
+        height: 64.23px;
+    }
+    .nav-logo{
+        display: none;
+    }
+    .menu-hamburguer {
+        display: flex;
+        translate: 50%;
+    }
+
+    .nav-links {
+        opacity: 0;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1A1A59;       
+        margin-right: 100%;
+        translate: 101%;
+        width: 200px;
+        transition: opacity .3s ease;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-link:hover {
+        cursor:pointer;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    }
+    .box-search{
+        padding: 5px;
+    }
+    .fa-search{
+        position: relative;
+        translate: -150%;
+    }
+    .nav-links li {
+        margin: 10px auto;
+        margin-top: 0;
+        width: 8rem;
+        height: 20px;
+    }
+
+    .nav-links.open {
+        display: flex;
+        max-height: 500px;
+        opacity: 100;
+    }
+  }
+
+  @media (max-width: 850px){
+    .search-procedure{
+        width: 70%;
+    }
+    .container-procedimentos{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 95%;
+        height: 100%;
+        text-align: center;
+    }
+    .info-procedimento{
+        display: flex;
+        width:85%;
+    }
+  }
+
+
+  /*
+  
+  Azul Marinho (#1A1A59) - Uma cor que transmite confiança e profissionalismo.
+  Cinza Claro (#D9D9D9) - Para uma aparência limpa e moderna.
+  Branco (#FFFFFF) - Para contraste e clareza.
+  Verde Esmeralda (#009688) - Para uma sensação de crescimento e inovação.
+  Laranja (#FF5722) - Para destacar elementos importantes e adicionar um toque de energia.
+  
+  Aplicação da Paleta:
+  Azul Marinho: Pode ser usado para cabeçalhos, rodapés e outros elementos principais.
+  Cinza Claro: Ideal para fundos ou seções que precisam ser neutras.
+  Branco: Ótimo para o fundo principal, garantindo legibilidade e clareza.
+  Verde Esmeralda: Pode ser utilizado para botões de chamada à ação ou elementos que você deseja destacar sem ser muito agressivo.
+  Laranja: Perfeito para botões de destaque ou alertas importantes.
+  
+  Exemplo Visual:
+  Cabeçalho e Rodapé: Azul Marinho
+  Fundo Principal: Branco
+  Seções Secundárias: Cinza Claro
+  Botões de Ação: Verde Esmeralda
+  Elementos de Destaque: Laranja
+  
+  
